@@ -1,8 +1,9 @@
 import React from 'react';
-import { CardMediaProps } from './Card.types';
 
-const CardMedia: React.FC<CardMediaProps> = (props) => {
+export interface CardMediaProps {
+  image: string;
+}
+
+export function CardMedia(props: CardMediaProps) {
   return <img className="rounded-t-lg" src={props.image} />;
-};
-
-export default CardMedia;
+}

@@ -1,3 +1,4 @@
+import { create } from '@storybook/theming';
 import './tailwind.css';
 /**
  * Read https://storybook.js.org/docs/react/configure/overview#configure-story-rendering
@@ -42,6 +43,58 @@ import './tailwind.css';
  *
  * With backgrounds, you configure the list of backgrounds that every story can render in.
  */
+
+// base: "light" | "dark";
+//     colorPrimary?: string;
+//     colorSecondary?: string;
+//     appBg?: string;
+//     appContentBg?: string;
+//     appBorderColor?: string;
+//     appBorderRadius?: number;
+//     fontBase?: string;
+//     fontCode?: string;
+//     textColor?: string;
+//     textInverseColor?: string;
+//     textMutedColor?: string;
+//     barTextColor?: string;
+//     barSelectedColor?: string;
+//     barBg?: string;
+//     inputBg?: string;
+//     inputBorder?: string;
+//     inputTextColor?: string;
+//     inputBorderRadius?: number;
+//     brandTitle?: string;
+//     brandUrl?: string;
+//     brandImage?: string;
+//     brandTarget?: string;
+//     gridCellSize?: number;
+
+const lightTheme = create({
+  base: 'light',
+  appBg: '#f9fafb',
+  colorPrimary: 'red',
+  colorSecondary: '#0369a1',
+  appContentBg: '#ffffff',
+  barBg: '#ffffff',
+  brandTitle: 'Tailwind Components',
+});
+const darkTheme = create({
+  base: 'dark',
+  appBg: '#111827',
+  colorSecondary: '#0ea5e9',
+  colorPrimary: 'red',
+  appContentBg: '#1f2937',
+  barBg: '#1f2937',
+  brandTitle: 'Tailwind Components',
+});
+
+export const parameters = {
+  darkMode: {
+    dark: darkTheme,
+    light: lightTheme,
+    stylePreview: true,
+  },
+};
 
 /**
  * Global Types

@@ -1,5 +1,5 @@
 import React from 'react';
-import Navbar from './Navbar';
+import { Navbar } from './Navbar';
 
 export default {
   title: 'Navbar',
@@ -7,11 +7,20 @@ export default {
 };
 
 const navItems = [
-  { text: 'About', href: '#about', active: true },
-  { text: 'Experience', href: '#experience' },
-  { text: 'Projects', href: '#projects' },
-  { text: 'Education', href: '#education' },
+  { text: 'About', href: '#about', id: 'about', handleClick: () => null },
+  { text: 'Experience', href: '#experience', id: 'experience', handleClick: () => null },
+  { text: 'Projects', href: '#projects', id: 'projects', handleClick: () => null },
+  { text: 'Education', href: '#education', id: 'education', handleClick: () => null },
 ];
 
-export const Left = () => <Navbar navItems={navItems} position="left" />;
-export const Right = () => <Navbar navItems={navItems} position="right" />;
+export function Overview(args) {
+  return <Navbar {...args} navItems={navItems} />;
+}
+
+Overview.args = {
+  position: 'left',
+  activeItemId: 'about',
+};
+
+export const Left = () => <Navbar navItems={navItems} position="left" activeItemId="about" />;
+export const Right = () => <Navbar navItems={navItems} position="right" activeItemId="about" />;

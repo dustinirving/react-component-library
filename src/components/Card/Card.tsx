@@ -1,12 +1,12 @@
 import React from 'react';
-import { CardProps } from './Card.types';
+export interface CardProps {
+  children: React.ReactNode;
+}
 
-const Card: React.FC<CardProps> = (props) => {
+export function Card(props: CardProps) {
   return (
-    <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-900 dark:border-gray-700">
+    <div className="max-w-sm rounded-lg border border-gray-200 bg-gray-50 shadow dark:border-gray-700 dark:bg-gray-900">
       {props.children}
     </div>
   );
-};
-
-export default Card;
+}
