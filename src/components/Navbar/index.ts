@@ -1,2 +1,2 @@
-export * from './Navbar';
-export * from './NavItem';
+export * from './Navbar.js';
+export * from './NavItem.js';
