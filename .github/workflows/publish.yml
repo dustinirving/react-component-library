@@ -25,13 +25,13 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout 🛎️
+      - name: Checkout
         uses: actions/checkout@v3
-      - name: Setup Node 18.x
+      - name: Setup Node 16.x
         uses: actions/setup-node@v3
         with:
-          node-version: 18.x
-      - name: Install and Build 🔧
+          node-version: 16.x
+      - name: Install and Build
         run: |
           git config --global user.email dustin.irving@gmail.com
           git config --global user.name dustinirving
