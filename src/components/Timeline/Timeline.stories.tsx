@@ -1,8 +1,4 @@
-import { Timeline } from './Timeline';
-import { TimelineItem } from './TimelineItem';
-import { TimelineTime } from './TimelineTime';
-import { TimelineTitle } from './TimelineTitle';
-import { TimelineParagraph } from './TimelineParagraph';
+import { Timeline, TimelineItem, TimelineTime, TimelineTitle, TimelineParagraph } from './index.js';
 import React from 'react';
 
 export default {

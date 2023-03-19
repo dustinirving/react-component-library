@@ -1,9 +1,5 @@
 import React from 'react';
-import { Card } from './Card';
-import { CardMedia } from './CardMedia';
-import { CardContent } from './CardContent';
-import { CardTitle } from './CardTitle';
-import { CardParagraph } from './CardParagraph';
+import { Card, CardMedia, CardContent, CardTitle, CardParagraph } from './index.js';
 
 export default {
   title: 'Card',

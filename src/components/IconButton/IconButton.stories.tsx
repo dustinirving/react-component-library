@@ -1,6 +1,5 @@
-import { IconButton } from './IconButton';
+import { IconButton } from './index.js';
 import React from 'react';
-import Tooltip from '../Tooltip/Tooltip';
 
 export default {
   title: 'IconButton',
