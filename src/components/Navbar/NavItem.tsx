@@ -1,6 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
-import { NavbarItem } from './Navbar.js';
+import { NavbarItem } from './Navbar';
 export interface NavItemProps extends NavbarItem {
   active: boolean;
 }

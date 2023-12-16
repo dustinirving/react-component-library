@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 import React, { useState } from 'react';
-import NavItem from './NavItem.js';
+import NavItem from './NavItem';
 
 export interface NavbarItem {
   href: string;

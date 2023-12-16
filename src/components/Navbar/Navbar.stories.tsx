@@ -1,5 +1,5 @@
 import React from 'react';
-import { Navbar } from './index.js';
+import { Navbar } from './';
 
 export default {
   title: 'Navbar',

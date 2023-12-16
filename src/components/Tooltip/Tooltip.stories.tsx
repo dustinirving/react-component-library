@@ -1,4 +1,4 @@
-import { Tooltip } from './index.js';
+import { Tooltip } from './';
 import React from 'react';
 
 export default {

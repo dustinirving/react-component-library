@@ -1,4 +1,4 @@
-import { Link } from './index.js';
+import { Link } from './';
 import React from 'react';
 
 export default {

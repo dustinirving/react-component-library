@@ -1,4 +1,4 @@
-import { IconButton } from './index.js';
+import { IconButton } from './';
 import React from 'react';
 
 export default {
