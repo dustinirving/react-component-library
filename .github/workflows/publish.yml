@@ -31,8 +31,10 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 16.x
+      - name: Installation
+        run: npm ci
       - name: Deploy Storybook
         uses: ./.github/actions/deploy
         with:
-          bucket: 'test-bucket'
+          s3Bucket: 'test-bucket'
           cfDistributionId: 'test-cf-distribution-id'
