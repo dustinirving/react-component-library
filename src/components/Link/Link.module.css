@@ -1,0 +1,9 @@
+.link {
+  cursor: pointer;
+  font-weight: 500;
+  color: var(--theme-active-color);
+}
+
+.link:hover {
+  color: var(--theme-highlight-color);
+}

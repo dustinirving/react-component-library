@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import React, { useState } from 'react';
 import NavItem from './NavItem';
-
+import styles from './Navbar.module.css';
 export interface NavbarItem {
   href: string;
   text: string;
@@ -22,7 +22,7 @@ export function Navbar(props: NavbarProps) {
   return (
     <nav
       className={classNames(
-        'w-full border-b border-gray-200 bg-white px-2 py-2 dark:border-none dark:bg-gray-900 sm:px-4',
+        `w-full border-b border-gray-200 px-2 py-2 dark:border-none sm:px-4 ${styles.navbar}`,
         { fixed },
       )}
     >
