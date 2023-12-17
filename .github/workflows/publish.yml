@@ -31,11 +31,8 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 16.x
-      - name: Install and Build
-        run: |
-          git config --global user.email dustin.irving@gmail.com
-          git config --global user.name dustinirving
-          git remote set-url origin https://dustinirving:${{ secrets.GH_TOKEN }}@github.com/dustinirving/tailwind-component-library.git
-          npm ci
-          npm run build
-          npm run deploy
+      - name: Deploy Storybook
+        uses: ./.github/actions/deploy
+        with:
+          bucket: 'test-bucket'
+          cfDistributionId: 'test-cf-distribution-id'
