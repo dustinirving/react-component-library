@@ -36,7 +36,7 @@ jobs:
       - name: Build Storybook
         run: npm run build-storybook
       - name: Deploy Storybook
-        uses: dustinirving/deploy-s3@v1.0.2
+        uses: dustinirving/deploy-s3@v1.0.3
         with:
           buildFolder: 'storybook-static'
         env:
