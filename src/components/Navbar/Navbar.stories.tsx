@@ -24,4 +24,3 @@ Overview.args = {
 
 export const Left = () => <Navbar navItems={navItems} position="left" activeItemId="about" />;
 export const Right = () => <Navbar navItems={navItems} position="right" activeItemId="about" />;
-export const Test = () => <Navbar navItems={navItems} position="right" activeItemId="experience" />;
