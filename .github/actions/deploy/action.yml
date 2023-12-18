@@ -1,9 +1,0 @@
-name: 'Deploy to S3 and CF'
-description: 'This deploys the build to S3 and CloudFront'
-inputs:
-  buildFolder:
-    description: The directory to deploy
-    required: true
-runs:
-  using: 'node16'
-  main: 'index.js'
