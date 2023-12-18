@@ -1,13 +1,9 @@
 name: 'Deploy to S3 and CF'
 description: 'This deploys the build to S3 and CloudFront'
 inputs:
-  bucket:
-    description: The S3 bucket to deploy to
-    required: false
-  cfDistributionId:
-    description: The CloudFront distribution ID to invalidate
-    required: false
-
+  buildFolder:
+    description: The directory to deploy
+    required: true
 runs:
   using: 'node16'
   main: 'index.js'
