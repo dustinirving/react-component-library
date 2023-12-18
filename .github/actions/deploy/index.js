@@ -1,5 +1,4 @@
 const core = require('@actions/core');
-const path = require('path');
 const { execSync } = require('child_process');
 
 function run(cmd, options = {}) {
