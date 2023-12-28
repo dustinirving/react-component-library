@@ -1,1 +1,1 @@
-# tailwind-component-library
+# react-component-library
