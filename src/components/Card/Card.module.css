@@ -1,0 +1,35 @@
+/* Card */
+.card {
+  max-width: 20rem;
+  border-radius: 0.75rem;
+  border: 1px solid var(--theme-border-color);
+  background-color: var(--theme-primary-color);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+/* Card Content */
+.cardContent {
+  padding: 1.25rem;
+}
+
+/* Card Media */
+.cardMedia {
+  border-top-left-radius: 0.75rem;
+  border-top-right-radius: 0.75rem;
+}
+
+/* Card Paragraph */
+.cardParagraph {
+  margin-bottom: 0.75rem; /* mb-3 */
+  font-weight: 400; /* font-normal */
+  color: var(--theme-foreground-color);
+}
+
+/* Card Title */
+.cardTitle {
+  margin-bottom: 0.5rem; /* mb-2 */
+  font-size: 1.5rem; /* text-2xl */
+  font-weight: 700; /* font-bold */
+  letter-spacing: 0.025em; /* tracking-tight */
+  color: var(--theme-active-color);
+}

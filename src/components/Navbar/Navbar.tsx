@@ -1,6 +1,4 @@
-import classNames from 'classnames';
 import React, { useState } from 'react';
-import NavItem from './NavItem';
 import styles from './Navbar.module.css';
 export interface NavbarItem {
   href: string;
@@ -10,32 +8,28 @@ export interface NavbarItem {
 }
 export interface NavbarProps {
   navItems: NavbarItem[];
-  position?: 'left' | 'right';
   children?: React.ReactNode;
   activeItemId: string;
   fixed?: boolean;
 }
+export interface NavItemProps extends NavbarItem {
+  active: boolean;
+}
+export interface NavItemsProps {
+  children: React.ReactNode;
+}
 
-export function Navbar(props: NavbarProps) {
-  const { navItems, position, children, activeItemId, fixed } = props;
+const Navbar: React.FC<NavbarProps> = (props) => {
+  const { children, fixed } = props;
   const [navItemsHidden, setNavItemsHidden] = useState(true);
   return (
-    <nav
-      className={classNames(
-        `w-full border-b border-gray-200 px-2 py-2 dark:border-none sm:px-4 ${styles.navbar}`,
-        { fixed },
-      )}
-    >
-      <div className="container mx-auto flex flex-wrap items-center justify-between">
-        <div className="flex md:hidden">
-          <button
-            type="button"
-            onClick={() => setNavItemsHidden(!navItemsHidden)}
-            className="inline-flex items-center rounded-lg p-2 text-sm text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-          >
+    <nav className={`${styles.navbar} ${fixed ? styles.fixedNavbar : ''}`}>
+      <div className={styles.container}>
+        <div className={styles.menuButton}>
+          <button type="button" onClick={() => setNavItemsHidden(!navItemsHidden)}>
             <span className="sr-only">Open main menu</span>
             <svg
-              className="h-6 w-6"
+              className={styles.menuIcon}
               fill="currentColor"
               viewBox="0 0 20 20"
               xmlns="http://www.w3.org/2000/svg"
@@ -48,25 +42,31 @@ export function Navbar(props: NavbarProps) {
             </svg>
           </button>
         </div>
-        <div className={classNames({ 'md:order-2': position === 'left' })}>{children}</div>
-        <div
-          className={classNames('w-full items-center justify-between md:flex md:w-auto', {
-            hidden: navItemsHidden,
-          })}
-        >
-          <ul className="mt-4 flex flex-col rounded-lg border border-gray-100 bg-white p-4 dark:border-gray-700 dark:bg-gray-800 md:mt-0 md:flex-row md:space-x-8 md:border-0 md:bg-white md:font-medium md:dark:bg-gray-900">
-            {navItems.map(({ text, href, id, handleClick }) => (
-              <NavItem
-                text={text}
-                href={href}
-                active={activeItemId === id}
-                id={id}
-                handleClick={handleClick}
-              />
-            ))}
-          </ul>
+        <div className={`${styles.navItemsWrapper} ${navItemsHidden ? styles.hidden : ''}`}>
+          {children}
         </div>
       </div>
     </nav>
   );
-}
+};
+
+const NavItems: React.FC<NavItemsProps> = (props) => {
+  return <ul className={styles.navItems}>{props.children}</ul>;
+};
+
+const NavItem: React.FC<NavItemProps> = (props) => {
+  const { href, text, active, id, handleClick } = props;
+  return (
+    <li key={id} onClick={handleClick}>
+      <a
+        href={href}
+        className={`${styles.navItemLink} ${active ? styles.active : ''}`}
+        data-active={active}
+      >
+        {text}
+      </a>
+    </li>
+  );
+};
+
+export default Object.assign(Navbar, { Item: NavItem, Items: NavItems });

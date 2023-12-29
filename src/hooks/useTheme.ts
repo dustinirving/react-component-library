@@ -1,15 +1,10 @@
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useState } from 'react';
 
-export function useTheme() {
-  const [theme, setTheme] = useState('light');
-
-  useEffect(() => {
-    updateTheme('dark');
-  }, []);
+export function useTheme(defaultTheme: 'dark' | 'light' = 'light') {
+  const [theme, setTheme] = useState(defaultTheme);
 
   const updateTheme = useCallback((newTheme: 'dark' | 'light') => {
     if (newTheme === 'dark') {
-      console.log('add');
       document.documentElement.classList.add('dark');
     } else {
       console.log('remove');

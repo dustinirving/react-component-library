@@ -1,2 +1,3 @@
 export * from './Navbar';
-export * from './NavItem';
+import Navbar from './Navbar';
+export { Navbar };

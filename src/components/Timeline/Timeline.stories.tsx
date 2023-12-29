@@ -1,4 +1,4 @@
-import { Timeline, TimelineItem, TimelineTime, TimelineTitle, TimelineParagraph } from './';
+import Timeline from './Timeline';
 import React from 'react';
 
 export default {
@@ -9,22 +9,22 @@ export default {
 export function Overview() {
   return (
     <Timeline>
-      <TimelineItem>
-        <TimelineTime>February 2022</TimelineTime>
-        <TimelineTitle>Application UI code in Tailwind CSS</TimelineTitle>
-        <TimelineParagraph>
+      <Timeline.Item>
+        <Timeline.Time>February 2022</Timeline.Time>
+        <Timeline.Title>Application UI code in Tailwind CSS</Timeline.Title>
+        <Timeline.Paragraph>
           Get access to over 20+ pages including a dashboard layout, charts, kanban board, calendar,
           and pre-order E-commerce & Marketing pages.
-        </TimelineParagraph>
-      </TimelineItem>
-      <TimelineItem>
-        <TimelineTime>March 2022</TimelineTime>
-        <TimelineTitle>Marketing UI design in Figma</TimelineTitle>
-        <TimelineParagraph>
+        </Timeline.Paragraph>
+      </Timeline.Item>
+      <Timeline.Item>
+        <Timeline.Time>March 2022</Timeline.Time>
+        <Timeline.Title>Marketing UI design in Figma</Timeline.Title>
+        <Timeline.Paragraph>
           All of the pages and components are first designed in Figma and we keep a parity between
           the two versions even as we update the project.
-        </TimelineParagraph>
-      </TimelineItem>
+        </Timeline.Paragraph>
+      </Timeline.Item>
     </Timeline>
   );
 }

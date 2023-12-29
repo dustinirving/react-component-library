@@ -1,9 +1,9 @@
 .link {
   cursor: pointer;
   font-weight: 500;
-  color: var(--theme-active-color);
+  color: var(--theme-link-color);
 }
 
 .link:hover {
-  color: var(--theme-highlight-color);
+  color: var(--theme-link-hover-color);
 }

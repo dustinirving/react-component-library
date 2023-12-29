@@ -1,5 +1,5 @@
 import React from 'react';
-import { Navbar } from './';
+import Navbar from './Navbar';
 
 export default {
   title: 'Navbar',
@@ -13,14 +13,31 @@ const navItems = [
   { text: 'Education', href: '#education', id: 'education', handleClick: () => null },
 ];
 
-export function Overview(args) {
-  return <Navbar {...args} navItems={navItems} />;
-}
+// export function Overview(args) {
+//   return <Navbar {...args} navItems={navItems} />;
+// }
 
-Overview.args = {
-  position: 'left',
-  activeItemId: 'about',
-};
+// Overview.args = {
+//   position: 'left',
+//   activeItemId: 'about',
+// };
 
-export const Left = () => <Navbar navItems={navItems} position="left" activeItemId="about" />;
-export const Right = () => <Navbar navItems={navItems} position="right" activeItemId="about" />;
+export const Left = () => (
+  <Navbar>
+    <Navbar.Items>
+      {navItems.map((item) => (
+        <Navbar.Item {...item} active={item.id === 'about'} />
+      ))}
+    </Navbar.Items>
+  </Navbar>
+);
+
+export const Right = () => (
+  <Navbar>
+    <Navbar.Items>
+      {navItems.map((item) => (
+        <Navbar.Item {...item} active={item.id === 'about'} />
+      ))}
+    </Navbar.Items>
+  </Navbar>
+);

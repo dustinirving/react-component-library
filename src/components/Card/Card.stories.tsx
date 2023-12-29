@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardMedia, CardContent, CardTitle, CardParagraph } from './';
+import Card from './Card';
 
 export default {
   title: 'Card',
@@ -8,10 +8,10 @@ export default {
 
 export const Overview = () => (
   <Card>
-    <CardMedia image="https://flowbite.com/docs/images/blog/image-1.jpg" />
-    <CardContent>
-      <CardTitle>Title</CardTitle>
-      <CardParagraph>Content</CardParagraph>
-    </CardContent>
+    <Card.Media image="https://flowbite.com/docs/images/blog/image-1.jpg" />
+    <Card.Content>
+      <Card.Title>Title</Card.Title>
+      <Card.Paragraph>Content</Card.Paragraph>
+    </Card.Content>
   </Card>
 );

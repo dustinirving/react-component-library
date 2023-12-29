@@ -8,8 +8,9 @@ const lightTheme = create({
   colorSecondary: '#0369a1',
   appContentBg: '#ffffff',
   barBg: '#ffffff',
-  brandTitle: 'Tailwind Components',
+  brandTitle: 'React Components',
 });
+
 const darkTheme = create({
   base: 'dark',
   appBg: '#111827',
@@ -17,7 +18,7 @@ const darkTheme = create({
   colorPrimary: 'red',
   appContentBg: '#1f2937',
   barBg: '#1f2937',
-  brandTitle: 'Tailwind Components',
+  brandTitle: 'React Components',
 });
 
 const parameters = {

@@ -1,0 +1,49 @@
+/* Timeline */
+.timeline {
+  position: relative;
+  border-left: 1px solid #e5e7eb; /* border-gray-200 */
+}
+
+/* Timeline Item */
+.timelineItem {
+  margin-left: 1rem;
+}
+
+.timelineItem:not(:last-child) {
+  margin-bottom: 2.5rem;
+}
+
+.timelineDot {
+  position: absolute;
+  left: -0.375rem; /* -1.5px */
+  margin-top: 0.375rem; /* 1.5px */
+  height: 0.75rem; /* 3px */
+  width: 0.75rem; /* 3px */
+  border-radius: 9999px; /* rounded-full */
+  border: 1px solid #ffffff;
+  background-color: #e5e7eb; /* bg-gray-200 */
+}
+
+/* Timeline Paragraph */
+.timelineParagraph {
+  margin-bottom: 1rem;
+  font-size: 1rem; /* text-base */
+  font-weight: 400; /* font-normal */
+  color: #6b7280; /* text-gray-500 */
+}
+
+/* Timeline Time */
+.timelineTime {
+  margin-bottom: 0.25rem; /* mb-1 */
+  font-size: 0.875rem; /* text-sm */
+  font-weight: 400; /* font-normal */
+  line-height: 1; /* leading-none */
+  color: #9ca3af; /* text-gray-400 */
+}
+
+/* Timeline Title */
+.timelineTitle {
+  font-size: 1.125rem; /* text-lg */
+  font-weight: 600; /* font-semibold */
+  color: var(--theme-active-color);
+}

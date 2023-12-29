@@ -288,34 +288,30 @@
 
 :root:not(.dark) {
   --theme-background-color: var(--gray-50);
-  --theme-foreground-color: var(--gray-300);
-  --theme-primary-color: var(--gray-300);
-  --theme-active-color: var(--sky-700);
-  --theme-highlight-color: var(--sky-500);
+  --theme-foreground-color: var(--gray-600);
+  --theme-primary-color: var(--gray-100);
+  --theme-active-color: var(--gray-900);
+  --theme-link-color: var(--sky-600);
+  --theme-link-hover-color: var(--sky-500);
+  --theme-tooltip-background-color: var(--gray-900);
+  --theme-tooltip-foreground-color: var(--gray-50);
+  --theme-border-color: var(--gray-200);
+  --theme-button-hover-color: var(--gray-50);
+  --theme-button-hover-icon-color: var(--gray-900);
+  --theme-button-focus-color: var(--gray-300);
 }
 
 :root.dark {
   --theme-background-color: var(--gray-800);
-  --theme-foreground-color: var(--gray-300);
+  --theme-foreground-color: var(--gray-400);
   --theme-primary-color: var(--gray-900);
-  --theme-active-color: var(--sky-500);
-  --theme-highlight-color: var(--sky-600);
+  --theme-active-color: var(--gray-50);
+  --theme-link-color: var(--sky-500);
+  --theme-link-hover-color: var(--sky-400);
+  --theme-tooltip-background-color: var(--gray-700);
+  --theme-tooltip-foreground-color: var(--gray-50);
+  --theme-border-color: transparent;
+  --theme-button-hover-color: var(--gray-700);
+  --theme-button-hover-icon-color: var(--gray-50);
+  --theme-button-focus-color: var(--gray-500);
 }
-/* :root {
-  --theme-background-color: var(--gray-200);
-  --theme-foreground-color: ${COLORS['white']};
-  --theme-primary-color: ${COLORS['gray-14']};
-  --theme-primary-foreground-color: ${COLORS['white']};
-  --theme-secondary-color: ${COLORS['gray-13']};
-  --theme-secondary-foreground-color: ${COLORS['white']};
-  --theme-tertiary-color: ${COLORS['gray-11']};
-  --theme-tertiary-foreground-color: ${COLORS['gray-9']};
-  --theme-card-color: ${COLORS['gray-8']};
-  --theme-card-foreground-color: ${COLORS['white']};
-  --theme-active-color: ${COLORS['turquoise-1']};
-  --theme-active-foreground-color: ${COLORS['white']};
-} */
-
-/* :root .dark-mode {
-
-} */
