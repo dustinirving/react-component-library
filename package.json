@@ -1,7 +1,7 @@
 {
-  "name": "tailwind-component-library",
+  "name": "@dustinirving/react-component-library",
   "version": "1.0.0",
-  "description": "A React component library styled with tailwind.",
+  "description": "A React component library styled with css modules.",
   "module": "./dist/esm/index.js",
   "main": "./dist/cjs/index.js",
   "types": "./dist/esm/index.d.ts",
@@ -39,20 +39,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/dustinirving/tailwind-component-library.git"
+    "url": "https://github.com/dustinirving/react-component-library.git"
   },
   "author": "Dustin Irving",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/dustinirving/tailwind-component-library/issues"
+    "url": "https://github.com/dustinirving/react-component-library/issues"
   },
-  "homepage": "https://github.com/dustinirving/tailwind-component-library#readme",
+  "homepage": "https://github.com/dustinirving/react-component-library#readme",
   "peerDependencies": {
     "react": ">=16.8.0",
     "react-dom": ">=16.8.0"
   },
   "devDependencies": {
-    "@actions/core": "^1.10.1",
     "@storybook/addon-essentials": "^7.6.5",
     "@storybook/react": "^7.6.5",
     "@storybook/react-vite": "^7.6.5",
@@ -60,7 +59,6 @@
     "@types/react-dom": "^18.0.10",
     "autoprefixer": "^10.4.13",
     "cpx": "^1.5.0",
-    "gh-pages": "^4.0.0",
     "husky": "^8.0.0",
     "postcss": "^8.4.20",
     "prettier": "^2.8.4",
@@ -76,7 +74,7 @@
     "typescript": "^4.9.4",
     "vite": "^4.5.1"
   },
-  "dependencies": {
-    "classnames": "^2.3.2"
+  "publishConfig": {
+    "access": "public"
   }
 }
